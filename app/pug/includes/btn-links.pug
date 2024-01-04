@@ -1,0 +1,18 @@
+mixin btnLinks(active) 
+  .cols-wrap.cols-wrap_btn-links 
+    each item,index in [{'title':'Hotel Guests','icon':'hotelGuests','link':'hotel-guests'},{'title':'Login','icon':'login','link':'login'},{'title':'Email','icon':'email','link':'email'},{'title':'Conference','icon':'conference','link':'conference'},{'title':'Access by Voucher','icon':'access','link':'access'},{'title':'Click and Go','icon':'click','link':'click'}]      
+      if active == index
+        .w50p
+          a(href=item.link+".html").button.button_active.click-effect-js
+            .icon.icon_stroke
+              svg
+                use(xlink:href='#'+item.icon)
+            =item.title
+
+      else
+        .w50p
+          a(href=item.link+".html").button.click-effect-js
+            .icon.icon_stroke
+              svg
+                use(xlink:href='#'+item.icon)
+            =item.title

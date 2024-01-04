@@ -1,0 +1,22 @@
+.slider
+  .swiper.slider-js
+    .swiper-wrapper
+      each item,index in [{"title":"Find & book <br> shows around you","desc":"Updated catalog of concerts, live perfomances taking place in your locality."},{"title":"Experience the <br> colourful night sky","desc":"Updated catalog of concerts, live perfomances taking place in your locality."},{"title":"Workspace that <br> looks after you","desc":"Updated catalog of concerts, live perfomances taking place in your locality."}]
+        .swiper-slide
+          .slider__item
+            .slider__bg-blur(style=`background-image: url('images/dist/blur-slide${(index + 1)}.webp`)
+            .slider__item-interior
+              .slider__desktop(style=`background-image: url('images/dist/desktop-slide${(index + 1)}.webp`)
+              .slider__mobile(style=`background-image: url('images/dist/mobile-slide${(index + 1)}.webp`)
+              
+              .slider__item-bottom
+                .slider__title!=item.title
+                .slider__desc!=item.desc
+
+                
+
+              
+
+
+
+    .swiper-pagination  

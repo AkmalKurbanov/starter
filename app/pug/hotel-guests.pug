@@ -1,0 +1,24 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+  - var activeBtnLink = '0';
+
+block title
+  | Hotel Guests
+block main
+block form
+  
+  .input
+    input(type="text" placeholder="Room number" name="Room number") 
+  .input
+    input(type="text" placeholder="Last name" name="Last name") 
+
+  button.button.button_gradient.w100p.mb-15 
+    span Connect
+

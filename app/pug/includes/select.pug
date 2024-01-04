@@ -1,0 +1,26 @@
+mixin select(selected, modify)
+  if modify == 'default'
+    .select.select_default.select-js
+      input.select-input(type="hidden")
+      .select__selected
+        .select__selected-text=selected 
+        .icon.icon_stroke
+          svg
+            use(xlink:href='#angleDown')
+
+      .select__dropdown
+        block
+  else
+    .select.select-js
+      input.select-input(type="hidden")
+      .select__selected
+        .select__selected-text=selected
+        .icon.icon_stroke
+          svg
+            use(xlink:href='#angleDown')
+
+      .select__dropdown
+        block
+
+mixin selectOption(text, id)
+  .select__option(data-text=text data-id=id)=text

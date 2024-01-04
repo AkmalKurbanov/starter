@@ -1,0 +1,14 @@
+.rating
+  @include aic-jcc
+  flex-direction: row-reverse
+  &__item 
+    color: red
+    cursor: pointer 
+    transition: $tr 
+
+    &:hover,
+    &:hover 
+      ~ .rating__item
+        color: yellow
+
+      

@@ -1,0 +1,28 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+  - var activeBtnLink = '1';
+
+block title
+  | Login
+block main
+block form
+  
+  .input
+    input(type="text" placeholder="Login" name="Login") 
+  .input
+    input(type="password" placeholder="Password" name="Password") 
+
+  button.button.button_gradient.w100p.mb-15 
+    span Connect  
+
+
+    
+
+  

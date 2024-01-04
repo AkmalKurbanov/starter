@@ -1,0 +1,25 @@
+mixin input(title, half, full, message)
+  if half == 'half'
+    .w50p
+      if message == 'error'
+        .input.input_error
+          input(type="text" name=title placeholder=title)
+          .input__message error message
+      else if message == 'success'
+        .input.input_success
+          input(type="text" name=title placeholder=title)
+          .input__message success message
+      else 
+        .input
+          input(type="text" name=title placeholder=title)
+          .input__message Lorem, ipsum.
+
+  else if full == 'full'
+    .w100p
+      .input
+        input(type="text" name=title placeholder=title)
+        .input__message Lorem, ipsum.
+  else      
+    .input
+      input(type="text" name=title placeholder=title)
+      .input__message Lorem, ipsum.

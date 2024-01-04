@@ -1,0 +1,90 @@
+block vars
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title
+      block title
+
+    meta(name='description' content=description)
+    meta(name='keywords' content=keywords)
+
+    meta(property='og:title' content=ogtitle)
+    meta(property='og:type' content=ogtype)
+    meta(property='og:url' content=ogurl)
+    meta(property='og:image' content=ogimg)
+
+    meta(name='theme-color' content='#005891')
+    meta(name='msapplication-navbutton-color' content='#005891')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#005891')
+    
+      
+    link(rel="stylesheet" href="css/app.min.css")
+    link(rel='shortcut icon' href='images/favicon.png' type='image/png')
+    link(rel='apple-touch-icon' href='images/apple-touch-icon.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='images/apple-touch-icon-114x114.png')
+    
+
+body
+  block main
+  include includes/preloader
+  include includes/select
+  include includes/input
+  include includes/btn-links
+
+  .wrapper
+    .content
+      .log
+        .container 
+          .log__wrap.pos-r
+            .logo 
+            
+            .lang 
+              +select('English', 'default')
+                +selectOption('English','en')
+                +selectOption('Русский','ru')
+                +selectOption('Deutsch','de')
+
+            .log__form
+              .title.title_h1.mb-15 Questionnaire
+              p.fz.mb-15 Please fill out the fields to use the service
+
+              form(action="")
+                .cols-wrap 
+                  +input('Surname', 'half', '', 'error')
+                  +input('Name', 'half')
+                  +input('Email', 'half', '', 'success')
+                  .w50p
+                    +select('Gender')
+                      +selectOption('Male', 'male')
+                      +selectOption('Female', 'female')
+                  
+                  .w100p
+                    .input.input_textarea
+                      textarea(name="review" placeholder="Review field optional")
+                  .w100p
+                    .input
+                      include includes/connecting
+                      include includes/form-rating
+
+                button.button.button_gradient.w100p
+                  span Send 
+
+                p.fz.text-center.mt-15 By clicking «Connect» you agree to the 
+                  a(href="#").td-underline.popup-trigger-js(data-name="term")  Terms of service 
+
+
+
+
+  include includes/svg-sprite 
+  include includes/scripts 

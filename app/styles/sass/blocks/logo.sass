@@ -1,0 +1,16 @@
+.logo
+  width: var(--width-logo-desktop)
+  height: var(--height-logo-desktop)
+  background-image: var(--url-logo)
+  background-position: center center
+  background-size: contain
+  background-repeat: no-repeat
+  margin: auto
+  margin-bottom: rem(40)
+  @include aic-jcc
+
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    width: var(--width-logo-mobile)
+    height: var(--height-logo-mobile)
+    margin-left: 0
+    margin-bottom: rem(24)

@@ -1,0 +1,304 @@
+.input
+  position: relative
+  @include aic-jcc
+  height: rem(44)
+  cursor: pointer
+
+  input,
+  textarea
+    position: relative
+    width: 100%
+    outline: none
+    font-size: rem(14)
+    font-weight: 500
+    letter-spacing: rem(-.56)
+    background: none
+    border: none
+    margin: auto
+    outline: none
+    color: var(--text-color-input-desktop)
+    border-style: solid
+    border-width: var(--border-width-input-desktop)
+    border-color: var(--border-color-input-desktop)
+    background: var(--background-color-input-first-desktop)
+    border-radius: var(--border-radius-input-desktop)
+    overflow: hidden
+    padding: rem(14) rem(16)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      color: var(--text-color-input-mobile)
+      border-width: var(--border-width-input-mobile)
+      border-color: var(--border-color-input-mobile)
+      background: var(--background-color-input-first-mobile)
+      border-radius: var(--border-radius-input-mobile)
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active
+      transition: background-color 5000s
+      -webkit-text-fill-color: var(--text-color-input-desktop)
+      border-radius: var(--border-radius-input-desktop)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        transition: background-color 5000s
+        -webkit-text-fill-color: var(--text-color-input-mobile)
+        border-radius: var(--border-radius-input-mobile)
+
+    @include placeholder
+      font-size: rem(14)
+      color: var(--color-placeholder-input-desktop)
+      font-weight: 500
+      letter-spacing: rem(-.56)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        color: var(--color-placeholder-input-mobile)
+
+  input
+    padding: 0 rem(16)
+    height: rem(44)
+
+  textarea
+    resize: vertical
+    min-height: rem(80)
+
+  &__val
+    @include aic-jfcfs
+    width: 100%
+    padding: 0 rem(16)
+
+    span
+      font-size: rem(14)
+      letter-spacing: rem(-0.56)
+
+      &:first-child
+        color: var(--color-placeholder-input-desktop)
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          color: var(--color-placeholder-input-mobile)
+
+      &:last-child
+        margin-left: rem(5)
+        color: var(--color-primary-desktop)
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          color: var(--color-primary-mobile)
+
+  &__message
+    opacity: 0
+    transition: $tr
+    top: 100%
+    left: rem(5)
+    position: absolute
+    font-size: rem(9)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      top: calc( 100% - 3px )
+
+  &_textarea
+    height: auto
+    
+
+  &_error,
+  &_success
+    overflow: visible
+
+    .input__message
+      opacity: 1
+
+  &_error
+    color: red
+
+    input
+      border-color: red
+
+      @include placeholder
+        color: red
+
+  &_success
+    color: green
+    input
+      border-color: green
+
+      @include placeholder
+        color: green
+
+  &_focused
+    input
+      border-color: var(--border-color-on-focus-input-desktop)
+
+.select
+  cursor: pointer
+  position: relative
+
+  &__selected
+    background: var(--background-color-input-first-desktop)
+    color: var(--color-placeholder-input-desktop)
+    border-radius: var(--border-radius-input-desktop)
+    @include aic-jfcsb
+    height: rem(44)
+    position: relative
+    padding: rem(14) rem(16)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      background: var(--background-color-input-first-mobile)
+      color: var(--color-placeholder-input-mobile)
+      border-radius: var(--border-radius-input-mobile)
+
+    &::before
+      position: absolute
+      content: ''
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: calc( 100% - 2.3px )
+      height: calc( 100% - 2px )
+      border: var(--border-width-input-desktop) solid var(--border-color-input-desktop)
+      border-radius: var(--border-radius-input-desktop)
+      pointer-events: none
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        border: var(--border-width-input-mobile) solid var(--border-color-input-mobile)
+        border-radius: var(--border-radius-input-mobile)
+
+    .icon
+      transition: $tr
+
+      svg
+        stroke: var(--color-placeholder-input-desktop)
+        fill: none
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          stroke: var(--color-placeholder-input-mobile)
+
+  &__selected-text
+    color: var(--color-placeholder-input-desktop)
+    font-size: rem(14)
+    font-weight: 500
+    letter-spacing: rem(-0.56)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      color: var(--color-placeholder-input-mobile)
+
+  &__dropdown
+    background: var(--background-color-input-first-desktop)
+    position: absolute
+    opacity: 0
+    left: 0
+    top: 100%
+    overflow: hidden
+    pointer-events: none
+    width: 100%
+    z-index: 199
+    border: var(--border-width-input-desktop) solid var(--border-color-input-desktop)
+    border-top: none
+    border-radius: 0 0 var(--border-radius-input-desktop) var(--border-radius-input-desktop)
+    transition: $tr
+    transform: translateY(-10px)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      background: var(--background-color-input-first-mobile)
+      border: var(--border-width-input-desktop) solid var(--border-color-input-mobile)
+      border-radius: 0 0 var(--border-radius-input-mobile) var(--border-radius-input-mobile)
+
+  &__option
+    transition: $tr
+    color: var(--text-color-input-desktop)
+    padding: rem(7) rem(16)
+    font-size: rem(14)
+    background: rgba(var(--background-color-input-first-desktop), .2)
+    border-bottom: rem(1) solid var(--border-color-input-desktop)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      color: var(--text-color-input-mobile)
+      background: rgba(var(--background-color-input-first-mobile), .2)
+      border-bottom: rem(1) solid var(--border-color-input-mobile)
+
+    &:last-child
+      border: none
+
+    &:hover
+      opacity: .7
+
+  &_default
+
+    .select__selected
+      height: auto
+      background: none
+      padding: 0
+
+      &:before
+        display: none
+
+      .icon
+        width: rem(15)
+        height: rem(15)
+        margin-left: rem(5)
+
+        svg
+          width: rem(15)
+          height: rem(15)
+
+    .select__dropdown
+      border-radius: calc( var(--border-radius-input-desktop) / 2 )
+      min-width: rem(90)
+      border: none
+      background: var(--background-color-button-desktop)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        border-radius: calc( var(--border-radius-input-mobile) / 2 )
+
+    .select__option
+      padding: rem(4) rem(10)
+      border: none
+
+      &:first-child
+        padding-top: rem(10)
+
+      &:last-child
+        padding-bottom: rem(10)
+
+  &.open
+    .select__selected
+      border-radius: var(--border-radius-input-desktop) var(--border-radius-input-desktop) 0 0
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        border-radius: var(--border-radius-input-mobile) var(--border-radius-input-mobile) 0 0
+
+      &:before
+        border-radius: var(--border-radius-input-desktop) var(--border-radius-input-desktop) 0 0
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          border-radius: var(--border-radius-input-mobile) var(--border-radius-input-mobile) 0 0
+
+    .select__dropdown
+      opacity: 1
+      pointer-events: inherit
+      transform: none
+    .icon
+      transform: rotate(180deg)
+
+    &.select_default
+
+      .select__dropdown
+        transform: translateY(8px)
+        opacity: 1
+        border-radius: calc( var(--border-radius-input-desktop) / 2 )
+        border: none
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          border-radius: calc( var(--border-radius-input-mobile) / 2 )
+
+  &.selected
+    .select__selected-text
+      color: var(--text-color-input-desktop)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        color: var(--text-color-input-mobile)
+
+    .icon
+      svg
+        stroke: var(--text-color-input-desktop)
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          stroke: var(--text-color-input-mobile)

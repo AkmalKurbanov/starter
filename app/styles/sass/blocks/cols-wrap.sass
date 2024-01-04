@@ -1,0 +1,20 @@
+.cols-wrap
+  @include fww-jfcsb
+  
+  .w50p
+    width: calc( 50% - 8px )
+    margin-bottom: rem(16)  
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      width: 100%
+      margin-bottom: rem(12)  
+
+  &_btn-links
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      .w50p
+        width: calc( 50% - 8px )
+        margin-bottom: rem(10)  
+
+  .w100p
+    width: 100%
+    margin-bottom: rem(16)  

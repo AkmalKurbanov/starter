@@ -1,0 +1,72 @@
+block vars
+  - var description;
+  - var keywords;
+  - var ogtitle;
+  - var ogtype;
+  - var ogurl;
+  - var ogimg;
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title
+      block title
+
+    meta(name='description' content=description)
+    meta(name='keywords' content=keywords)
+
+    meta(property='og:title' content=ogtitle)
+    meta(property='og:type' content=ogtype)
+    meta(property='og:url' content=ogurl)
+    meta(property='og:image' content=ogimg)
+
+    meta(name='theme-color' content='#005891')
+    meta(name='msapplication-navbutton-color' content='#005891')
+    meta(name='apple-mobile-web-app-status-bar-style' content='#005891')
+    
+      
+    link(rel="stylesheet" href="css/app.min.css")
+    link(rel='shortcut icon' href='images/favicon.png' type='image/png')
+    link(rel='apple-touch-icon' href='images/apple-touch-icon.png')
+    link(rel='apple-touch-icon' sizes='72x72' href='images/apple-touch-icon-72x72.png')
+    link(rel='apple-touch-icon' sizes='114x114' href='images/apple-touch-icon-114x114.png')
+    
+
+body
+  block main
+  include includes/preloader
+  include includes/select
+  include includes/input
+  include includes/btn-links
+
+  .wrapper
+    .content
+      .log
+        .container 
+          .log__wrap.pos-r
+            .logo 
+            .lang 
+              +select('English', 'default')
+                +selectOption('English','en')
+                +selectOption('Русский','ru')
+                +selectOption('Deutsch','de')
+            .log__form
+              .cols-wrap
+                each item in [{'label':'IP address:','val':'192.168.0.1'},{'label':'MAC address:','val':'56:ca:b6:de:0c:86'},{'label':'Session time:','val':'05:00 h'},{'label':'Time left:','val':'02:00 h'},{'label':'Bytes up:','val':'123001 Mb'},{'label':'Bytes down:','val':'53032 Mb'}]
+                  .w50p
+                    .input
+                      .input__val
+                        span=item.label 
+                        span=item.val
+
+              button.button.button_gradient.w100p.mt-15
+                span Log out
+
+
+
+
+  include includes/svg-sprite 
+  include includes/scripts 

@@ -1,0 +1,151 @@
+.slider
+  height: 100dvh
+
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide,
+  .slider__item
+    height: 100%
+
+  .swiper-pagination
+    position: fixed
+    left: 50%
+    transform: translateX(-50%)
+    bottom: auto
+
+    span
+      background: none
+      width: rem(10)
+      height: rem(10)
+      border: rem(1) solid #fff
+      opacity: 1
+
+    .swiper-pagination-bullet-active
+      background: #fff
+
+  .swiper-slide-active
+
+    .slider__desktop,
+    .slider__mobile,
+    .slider__title,
+    .slider__desc,
+    .slider__item-bottom
+      transform: none
+      opacity: 1
+
+
+  &__item
+    position: relative
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    @include aic-jcc
+
+  &__bg-blur
+    width: 100%
+    height: 100%
+    position: absolute
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    z-index: -1
+    filter: blur(15px)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      background: none !important
+      display: none
+
+    &::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background: rgba(0,0,0,.2)
+
+  &__item-interior
+    position: relative
+    border-radius: var(--border-radius-wrapper-desktop)
+    overflow: hidden
+    max-width: rem(700)
+    width: 100%
+    max-height: rem(600)
+    min-height: rem(600)
+    margin: auto
+    @include aife
+    background: #000
+    
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      max-height: 100%
+      min-height: 100%
+      max-width: none
+      border-radius: 0
+
+  &__desktop,
+  &__mobile
+      position: absolute
+      width: 100%
+      height: 100%
+      background-position: center
+      background-size: cover
+      transform: translateY(15px)
+      transition: all .7s
+      opacity: 0
+
+
+
+  &__desktop
+    display: flex
+    
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      display: none
+
+  &__mobile
+    display: none
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      display: flex
+
+  &__item-bottom
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.00) -9.29%, #0F172A 100%)
+    backdrop-filter: blur(rem(10px))
+    height: rem(160)
+    width: 100%
+    text-align: center
+    padding: rem(15) rem(25) rem(60)
+    opacity: 0
+    transition: $tr
+    transition-delay: .4s
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      min-height: rem(280)
+      text-align: left
+
+  &__title
+    font-size: rem(36)
+    color: #fff
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+    letter-spacing: rem(-0.72)
+    margin-bottom: rem(8)
+    transform: translateY(10px)
+    transition: $tr
+    opacity: 0
+    transition-delay: .4s
+    line-height: normal
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      line-height: rem(48)
+
+    br
+      display: none
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        display: block
+        
+
+  &__desc
+    font-size: rem(14)
+    color: #E2E8F0
+    transform: translateY(10px)
+    transition: $tr
+    opacity: 0
+    transition-delay: .5s
+    
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      line-height: rem(20)

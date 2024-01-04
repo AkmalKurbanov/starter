@@ -1,0 +1,26 @@
+.title
+  color: var(--title-label-color-desktop)
+  font-weight: 700
+  letter-spacing: rem(-2.16)
+  line-height: normal
+  
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    color: var(--title-label-color-mobile)
+
+  &_h1 
+    font-size: rem(36)
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      font-size: rem(24)
+      letter-spacing: rem(-1.44)
+  
+  &_subtitle
+    color: var(--color-primary-desktop)
+    letter-spacing: rem(-0.6)
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      color: var(--color-primary-mobile)
+  
+  &_primary
+    color: var(--color-primary-desktop)
+    
+  &_centered
+    text-align: center

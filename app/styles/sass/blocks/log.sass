@@ -1,0 +1,39 @@
+.log
+  padding-top: rem(65)
+  
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    padding-top: rem(16)
+
+  &__wrap  
+    max-width: rem(600)
+    width: 100%
+    margin: auto
+    position: relative
+
+    
+
+  &__form
+    padding: rem(40)
+    border-style: solid
+    border-width: var(--border-width-wrapper-desktop)
+    border-color: var(--border-color-wrapper-desktop)
+    border-radius: var(--border-radius-wrapper-desktop)
+    background: var(--background-color-wrapper-desktop)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      padding: rem(24) rem(16)
+      border-width: var(--border-width-wrapper-mobile)
+      border-color: var(--border-color-wrapper-mobile)
+      border-radius: var(--border-radius-wrapper-mobile)
+      background: var(--background-color-wrapper-mobile)
+
+    .button
+      border-radius: var(--border-radius-input-desktop)
+
+
+    .input
+      border-style: solid
+      border-width: var(--border-width-input-desktop)
+      border-color: var(--border-color-input-desktop)
+      background: var(--background-color-input-first-desktop)
+      border-radius: var(--border-radius-input-desktop)

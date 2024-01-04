@@ -1,0 +1,178 @@
+.form-wrap
+  @include aic-jcc
+  padding: rem(65) 0
+  height: 100%
+
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    padding: rem(25) 0
+
+  .container
+    height: 100%
+
+  .lang
+    right: rem(25)
+
+  &__bg-img
+    position: fixed
+    height: 100%
+    left: 0
+    top: 0
+    bottom: 0
+    background: linear-gradient(282deg, var(--background-primary) 8.87%, rgba(var(--gradient-background-img-form), 0.00) 42.06%), linear-gradient(192deg, var(--background-primary) 23.64%, rgba(var(--gradient-background-img-form), 0.00) 46.54%), linear-gradient(0deg, rgba(var(--gradient-background-img-form), 0.50) 0%, rgba(var(--gradient-background-img-form), 0.50) 100%), var(--url-background-img-form-desktop), lightgray 50% / cover no-repeat
+    background-size: cover
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      background: linear-gradient(180deg, var(--background-primary) 21.89%, rgba(var(--gradient-background-img-form), 0.00) 36.44%), linear-gradient(0deg, var(--background-primary) 4.97%, rgba(49, 15, 92, 0.00) 48.09%), var(--url-background-img-form-mobile), lightgray -170.559px -106.944px / 195.25% 131.04% no-repeat
+      max-height: rem(390)
+      width: 100%!important
+      right: 0
+      left: 0
+      top: 0
+      bottom: auto
+      background-size: cover
+
+  &__logo
+    max-width: rem(715)
+    width: 100%
+
+  .title
+    margin-bottom: rem(20)
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      margin-bottom: rem(10)
+
+  &__wrap
+    @include jfcsb
+    position: relative
+    width: 100%
+
+    @include sm
+      flex-direction: column
+
+  &__col
+    position: relative
+
+    &:first-child
+      padding-right: rem(30)
+
+      @include lg
+        width: 63%
+
+      @include md
+        width: 55%
+
+      @include sm
+        width: 100%
+        padding-right: 0
+        margin-bottom: rem(40)
+
+    &:last-child
+      @include lg
+        width: 37%
+
+      @include md
+        width: 45%
+
+      @include sm
+        width: 100%
+
+  &__media
+    max-width: rem(715)
+    width: 100%
+
+  &__form
+    max-width: rem(400)
+    min-width: rem(350)
+    width: 100%
+
+    @include md
+      min-width: auto
+
+    @include sm
+      margin: auto
+
+  &__bg-wrap
+    background-repeat: no-repeat
+    background-size: cover
+
+  .video
+    border-radius: var(--border-radius-preview-desktop)
+    overflow: hidden
+    @include aic-jcc
+    cursor: pointer
+    position: relative
+    width: 100%
+
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      border-radius: var(--border-radius-preview-mobile)
+
+    img
+      max-width: 100%
+
+    &__play
+      width: rem(90)
+      height: rem(90)
+      border-radius: 100%
+      background-color: rgba(0,0,0, .3)
+      overflow: hidden
+      @include aic-jcc
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        width: rem(50)
+        height: rem(50)
+
+      .icon
+        width: rem(30)
+        height: rem(30)
+
+        svg
+          width: rem(30)
+          height: rem(30)
+
+  .gallery
+    margin-top: rem(40)
+    position: relative
+
+    @include md
+      margin-top: rem(25)
+
+    @include sm
+      display: none
+
+    &__item
+      border-radius: var(--border-radius-image-gallery-desktop)
+      overflow: hidden
+      @include aic-jcc
+      cursor: pointer
+
+      img
+        width: 100%
+
+      // @media only screen and (min-width: 0px) and (max-width: 767px)
+      //   border-radius: var(--border-radius-image-gallery-mobile)
+
+      // &:first-child
+      //   background-image: var(--url-image-gallery-first)
+
+      // &:nth-child(2)
+      //   background-image: var(--url-image-gallery-second)
+
+      // &:last-child
+      //   background-image: var(--url-image-gallery-third)
+
+  .input
+    margin-bottom: rem(12)
+
+    input
+      background: var(--background-color-input-second-desktop)
+
+      @media only screen and (min-width: 0px) and (max-width: 767px)
+        background: var(--background-color-input-second-mobile)
+
+  .line-separate
+    @media only screen and (min-width: 0px) and (max-width: 767px)
+      display: none

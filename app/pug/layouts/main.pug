@@ -5,6 +5,8 @@ block vars
   - var ogtype;
   - var ogurl;
   - var ogimg;
+  - var activeBtnLink;
+  
 
 doctype html
 html(lang="en")
@@ -37,3 +39,68 @@ html(lang="en")
 
 body
   block main
+  include ../includes/popup
+  include ../includes/preloader
+  include ../includes/select
+  include ../includes/input
+  include ../includes/btn-links
+
+  .wrapper
+    .content
+      .form-wrap
+        .form-wrap__bg-img
+        .container 
+          .form-wrap__logo 
+            .logo
+          .lang 
+            +select('English', 'default')
+              +selectOption('English','en')
+              +selectOption('Русский','ru')
+              +selectOption('Deutsch','de')
+          .form-wrap__wrap 
+            .form-wrap__col
+              .form-wrap__media
+                a(data-src="https://www.youtube.com/watch?v=PVE8nGfWto0" data-fancybox).video.click-effect-js
+                  img(src="images/dist/video-preview.webp", alt="")
+                  .video__play
+                    .icon 
+                      svg
+                        use(xlink:href='#playBtn')
+
+                .gallery
+                  .swiper.gallery-js
+                    .swiper-wrapper
+                      each item in [1,2,3,4,5,6]
+                        .swiper-slide
+                          a(data-src="images/dist/gallery"+item+'.webp' data-fancybox="gallery").gallery__item
+                            img(src="images/dist/gallery"+item+'.webp', alt="")
+
+            .form-wrap__col 
+              .form-wrap__form
+                .title.title_h1.title_centered
+                  block title 
+
+                block subtitle 
+
+                block form
+              
+
+                .text.fz.text-center By clicking «Connect» you agree to the 
+                  a(href="#").td-underline.popup-trigger-js(data-name="term") Terms of service  
+
+                .line-separate
+
+                p.fz.text-center.mt-25.mb-25.fw-600 Or login using
+                
+                +btnLinks(activeBtnLink)
+
+                p.copyright Powered by
+                  a(href="https://hoteza.com/kz/" target="_blank") 
+                    svg(width="103" height="16")
+                      use(xlink:href='#copyright')
+
+
+
+
+  include ../includes/svg-sprite 
+  include ../includes/scripts 

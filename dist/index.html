@@ -6,15 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>main
     </title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta name="theme-color" content="#005891">
+    <meta name="msapplication-navbutton-color" content="#005891">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#005891">
     <link rel="stylesheet" href="css/app.min.css">
-    <link link rel="icon" href="favicon.ico">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   </head>
 </html>
 <body>
-  <div class="wrapper">
-    <div class="content">
-      <header>1</header>
+  <div class="slider">
+    <div class="swiper slider-js">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slider__item">
+            <div class="slider__bg-blur" style="background-image: url('images/dist/blur-slide1.webp"></div>
+            <div class="slider__item-interior">
+              <div class="slider__desktop" style="background-image: url('images/dist/desktop-slide1.webp"></div>
+              <div class="slider__mobile" style="background-image: url('images/dist/mobile-slide1.webp"></div>
+              <div class="slider__item-bottom">
+                <div class="slider__title">Find & book <br> shows around you</div>
+                <div class="slider__desc">Updated catalog of concerts, live perfomances taking place in your locality.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slider__item">
+            <div class="slider__bg-blur" style="background-image: url('images/dist/blur-slide2.webp"></div>
+            <div class="slider__item-interior">
+              <div class="slider__desktop" style="background-image: url('images/dist/desktop-slide2.webp"></div>
+              <div class="slider__mobile" style="background-image: url('images/dist/mobile-slide2.webp"></div>
+              <div class="slider__item-bottom">
+                <div class="slider__title">Experience the <br> colourful night sky</div>
+                <div class="slider__desc">Updated catalog of concerts, live perfomances taking place in your locality.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="slider__item">
+            <div class="slider__bg-blur" style="background-image: url('images/dist/blur-slide3.webp"></div>
+            <div class="slider__item-interior">
+              <div class="slider__desktop" style="background-image: url('images/dist/desktop-slide3.webp"></div>
+              <div class="slider__mobile" style="background-image: url('images/dist/mobile-slide3.webp"></div>
+              <div class="slider__item-bottom">
+                <div class="slider__title">Workspace that <br> looks after you</div>
+                <div class="slider__desc">Updated catalog of concerts, live perfomances taking place in your locality.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"> </div>
     </div>
-    <footer>2<img src="" alt=""></footer>
   </div>
+  <div class="preloader" id="preloader">
+    <div class="preloader__icon">
+      <div class="preloader__element">
+        <svg width="86" height="64" viewBox="0 0 86 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M33.8976 20.7994L27.1921 14C22.6698 18.5658 19.8672 24.8825 19.8672 31.8517C19.8672 38.8217 22.6754 45.1236 27.1921 49.7105L33.8976 42.902C32.1974 41.1744 30.8862 39.0423 30.1213 36.6657H55.4408C54.6759 39.0423 53.3647 41.1744 51.659 42.902L58.37 49.7105C62.8958 45.1236 65.6887 38.8217 65.6887 31.8517C65.6887 24.8825 62.8958 18.5658 58.37 14L51.659 20.7994C53.3647 22.5262 54.6759 24.6626 55.4408 27.0385H30.1213C30.8862 24.6626 32.1974 22.5262 33.8976 20.7994Z" fill="black"></path>
+        </svg>
+      </div>
+      <div class="preloader__element">
+        <svg width="86" height="64" viewBox="0 0 86 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M65.4834 6.7244C71.7651 13.1074 75.6442 21.9186 75.6442 31.6348C75.6442 41.3511 71.7651 50.1658 65.4834 56.5313L72.0885 63.2676C80.0672 55.1587 85 43.9716 85 31.6348C85 19.296 80.0672 8.11094 72.0885 0L65.4834 6.7244ZM20.5111 6.7244L13.9053 0C5.93823 8.11094 1 19.296 1 31.6348C1 43.9716 5.93823 55.1587 13.9053 63.2676L20.5227 56.5432C14.241 50.1658 10.3558 41.3511 10.3558 31.6348C10.3558 21.9214 14.241 13.1074 20.5111 6.7244Z" fill="black"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.min.js"> </script>
 </body>

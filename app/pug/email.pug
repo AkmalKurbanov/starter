@@ -1,0 +1,29 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+  - var activeBtnLink = '2';
+  
+block title
+  | Email
+block main
+block subtitle
+  .fz.text-center.mb-25 After entering your mail you will be given temporary access, <br> once you have verified your mail you will get full access
+block form
+
+  form(action="") 
+    .input
+      input(type="text" placeholder="Email" name="Email") 
+
+    button.button.button_gradient.w100p.mb-15   
+      span Connect and verify mail  
+
+
+
+    
+

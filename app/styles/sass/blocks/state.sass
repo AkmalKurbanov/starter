@@ -1,0 +1,124 @@
+.color-primary
+  color: var(--color-primary-desktop)
+
+.text-color
+  color: var(--text-color-primary-desktop)
+
+.title-color
+  color: var(--title-label-color-desktop)
+
+.border-radius-wrapper
+  border-radius: var(--border-radius-wrapper-desktop)
+
+.border-radius-component
+  border-radius: var(--border-radius-component)
+
+.bordered
+  position: relative
+
+  &:before
+    position: absolute
+    content: ''
+    width: calc( 100% - 2.3px )
+    height: calc( 100% - 2px )
+    border: var(--border-width-component) solid var(--border-color-component)
+
+.bordered-radius-wrap
+  position: relative
+
+  &:before
+    position: absolute
+    content: ''
+    width: calc( 100% - 2.3px )
+    height: calc( 100% - 2px )
+    border: var(--border-width-component) solid var(--border-color-component)
+    border-radius: var(--border-radius-wrapper-desktop)
+
+.bordered-radius-component
+  position: relative
+
+  &:before
+    position: absolute
+    content: ''
+    width: calc( 100% - 2.3px )
+    height: calc( 100% - 2px )
+    border: var(--border-width-component) solid var(--border-color-component)
+    border-radius: var(--border-radius-component)
+
+.bg-component
+  background: var(--bg-component)
+
+.text-white
+  color: #fff
+
+.text-black
+  color: #000
+
+.bg-white
+  background: #fff
+
+.text-black
+  background: #000
+
+.w50p
+  width: 50%
+
+.w100p
+  width: 100%
+
+.pos-r
+  position: relative
+
+.fz
+  font-size: rem(12)
+
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    font-size: rem(10)
+
+.td-underline
+  color: var(--color-primary-desktop)
+  position: relative
+  font-weight: 500
+  padding-bottom: rem(2)
+  transition: $tr
+  
+  &:hover
+    text-decoration: none
+
+.mt-15
+  margin-top: rem(15)
+
+.mb-15
+  margin-bottom: rem(15)
+
+.mt-25
+  margin-top: rem(25)
+
+.mb-25
+  margin-bottom: rem(25)
+
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    margin-bottom: rem(20)
+    
+
+.text-center
+  text-align: center  
+
+.fw-100 
+  font-weight: 100  
+.fw-200 
+  font-weight: 200  
+.fw-300 
+  font-weight: 300  
+.fw-400 
+  font-weight: 400  
+.fw-500 
+  font-weight: 500  
+.fw-600 
+  font-weight: 600  
+.fw-700 
+  font-weight: 700  
+.fw-800 
+  font-weight: 800  
+.fw-900 
+  font-weight: 900  
