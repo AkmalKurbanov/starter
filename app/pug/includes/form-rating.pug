@@ -1,3 +1,11 @@
 .rating
-  each item in [1,2,3,4,5]
-    .rating__item=item
+  input(type="hidden")
+  span Rate the quality
+  
+  .rating__wrap(data-total-val="1")
+    each item in [5,4,3,2,1]
+      .rating__item(data-val=item)
+        .icon.icon_stroke
+          svg
+            use(xlink:href='#star')
+

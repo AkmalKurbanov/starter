@@ -49,7 +49,6 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.32",
     "jquery": "^3.6.2",
-    "lottie-web": "^5.12.2",
     "normalize.css": "^8.0.1",
     "save-dev": "^0.0.1-security",
     "swiper": "11.0.5"

@@ -39,6 +39,23 @@
   </div>
   <div class="wrapper">
     <div class="content">
+      <div class="connect-element">
+        <div class="logo"></div>
+        <div>
+          <div class="connect-element__wrap">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="svg-elem-1" d="M25.6285 24.3545L22.328 20.9937C20.1021 23.2504 18.7227 26.3726 18.7227 29.8174C18.7227 33.2625 20.1049 36.3773 22.328 38.6446L25.6285 35.2793C24.7917 34.4254 24.1463 33.3715 23.7698 32.1968H36.2322C35.8558 33.3715 35.2104 34.4254 34.3708 35.2793L37.674 38.6446C39.9016 36.3773 41.2763 33.2625 41.2763 29.8174C41.2763 26.3726 39.9016 23.2504 37.674 20.9937L34.3708 24.3545C35.2104 25.208 35.8558 26.2639 36.2322 27.4383H23.7698C24.1463 26.2639 24.7917 25.208 25.6285 24.3545Z" fill="white"></path>
+              <path class="svg-elem-2" d="M41.2417 17.3622C44.3826 20.5537 46.3221 24.9593 46.3221 29.8174C46.3221 34.6756 44.3826 39.0829 41.2417 42.2657L44.5443 45.6338C48.5336 41.5794 51 35.9858 51 29.8174C51 23.648 48.5336 18.0555 44.5443 14L41.2417 17.3622ZM18.7555 17.3622L15.4527 14C11.4691 18.0555 9 23.648 9 29.8174C9 35.9858 11.4691 41.5794 15.4527 45.6338L18.7614 42.2716C15.6205 39.0829 13.6779 34.6756 13.6779 29.8174C13.6779 24.9607 15.6205 20.5537 18.7555 17.3622Z" fill="white"></path>
+            </svg>
+          </div>
+          <div class="connect-element__status connect-element__status_connecting">Connect... </div>
+          <div class="connect-element__status connect-element__status_connected">You are logged in </div>
+          <p class="copyright">Powered by<a href="https://hoteza.com/kz/" target="_blank">
+              <svg width="103" height="16">
+                <use xlink:href="#copyright"></use>
+              </svg></a></p>
+        </div>
+      </div>
       <div class="log">
         <div class="container"> 
           <div class="log__wrap pos-r">
@@ -108,17 +125,45 @@
                   </div>
                   <div class="w100p">
                     <div class="input">
-                      <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect class="svg-elem-1" width="120" height="120" rx="32" fill="#C6C6C6"></rect>
-                        <path class="svg-elem-2" d="M51.2573 48.709L44.6563 41.9874C40.2045 46.501 37.4456 52.7453 37.4456 59.6348C37.4456 66.525 40.21 72.7548 44.6563 77.2892L51.2573 70.5586C49.5836 68.8508 48.2928 66.7431 47.5399 64.3937H72.4647C71.7117 66.7431 70.421 68.8508 68.7418 70.5586L75.3483 77.2892C79.8035 72.7548 82.5528 66.525 82.5528 59.6348C82.5528 52.7453 79.8035 46.501 75.3483 41.9874L68.7418 48.709C70.421 50.416 71.7117 52.5279 72.4647 54.8767H47.5399C48.2928 52.5279 49.5836 50.416 51.2573 48.709Z" fill="white"></path>
-                        <path class="svg-elem-3" d="M82.4834 34.7244C88.7651 41.1074 92.6442 49.9186 92.6442 59.6348C92.6442 69.3511 88.7651 78.1658 82.4834 84.5313L89.0885 91.2676C97.0672 83.1587 102 71.9716 102 59.6348C102 47.296 97.0672 36.1109 89.0885 28L82.4834 34.7244ZM37.5111 34.7244L30.9053 28C22.9382 36.1109 18 47.296 18 59.6348C18 71.9716 22.9382 83.1587 30.9053 91.2676L37.5227 84.5432C31.241 78.1658 27.3558 69.3511 27.3558 59.6348C27.3558 49.9214 31.241 41.1074 37.5111 34.7244Z" fill="white"></path>
-                      </svg>
                       <div class="rating">
-                        <div class="rating__item">1</div>
-                        <div class="rating__item">2</div>
-                        <div class="rating__item">3</div>
-                        <div class="rating__item">4</div>
-                        <div class="rating__item">5</div>
+                        <input type="hidden"><span>Rate the quality</span>
+                        <div class="rating__wrap" data-total-val="1">
+                          <div class="rating__item" data-val="5">
+                            <div class="icon icon_stroke">
+                              <svg>
+                                <use xlink:href="#star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="rating__item" data-val="4">
+                            <div class="icon icon_stroke">
+                              <svg>
+                                <use xlink:href="#star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="rating__item" data-val="3">
+                            <div class="icon icon_stroke">
+                              <svg>
+                                <use xlink:href="#star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="rating__item" data-val="2">
+                            <div class="icon icon_stroke">
+                              <svg>
+                                <use xlink:href="#star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <div class="rating__item" data-val="1">
+                            <div class="icon icon_stroke">
+                              <svg>
+                                <use xlink:href="#star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -158,6 +203,9 @@
       <svg viewBox="0 0 20 20">
         <path d="M5 7L10 12L15 7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
+    </symbol>
+    <symbol id="star" viewBox="0 0 20 20">
+      <path d="M9.99988 14.7918L4.85653 17.496L5.83903 11.7685L1.67236 7.71262L7.42236 6.87929L9.99405 1.66846L12.5657 6.87929L18.3157 7.71262L14.149 11.7685L15.1315 17.496L9.99988 14.7918Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
     </symbol>
     <symbol id="playBtn" viewBox="0 0 30 30">
       <path d="M27.8476 15.0806L6 28.131L6.01871 2.00004L27.8476 15.0806Z" fill="white"></path>

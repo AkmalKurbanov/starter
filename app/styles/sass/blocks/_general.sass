@@ -9,7 +9,10 @@ body
   height: 100%
   
 body
-  background: var(--background-primary)
+  background: var(--background-primary-desktop)
+
+  @media only screen and (min-width: 0px) and (max-width: 767px)
+    background: var(--background-primary-mobile)
 
   &.no-scroll
     overflow: hidden

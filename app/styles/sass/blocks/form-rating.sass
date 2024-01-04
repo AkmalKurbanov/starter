@@ -1,14 +1,51 @@
 .rating
-  @include aic-jcc
-  flex-direction: row-reverse
-  &__item 
-    color: red
-    cursor: pointer 
-    transition: $tr 
+  width: 100%
+  @include aic
+  padding: 0 rem(16)
 
-    &:hover,
-    &:hover 
+  &__wrap
+    @include aic-jcc
+    flex-direction: row-reverse
+    margin-left: rem(30)
+
+  &__item
+    cursor: pointer
+    transition: $tr
+
+    .icon
+      svg
+        stroke: var(--border-color-input-desktop)
+        transition: $tr
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          stroke: var(--border-color-input-mobile)
+
+    &:hover
+      .icon
+        svg
+          stroke: var(--border-color-on-focus-input-desktop)
+
+          @media only screen and (min-width: 0px) and (max-width: 767px)
+            stroke: var(--border-color-on-focus-input-mobile)
+
       ~ .rating__item
-        color: yellow
+        .icon
+          svg
+            stroke: var(--border-color-on-focus-input-desktop)
 
-      
+            @media only screen and (min-width: 0px) and (max-width: 767px)
+              stroke: var(--border-color-on-focus-input-mobile)
+
+  &__wrap[data-total-val="1"] .rating__item:nth-child(n + 5),
+  &__wrap[data-total-val="2"] .rating__item:nth-child(n + 4),
+  &__wrap[data-total-val="3"] .rating__item:nth-child(n + 3),
+  &__wrap[data-total-val="4"] .rating__item:nth-child(n + 2),
+  &__wrap[data-total-val="5"] .rating__item:nth-child(n + 1)
+    .icon
+      svg
+        stroke: var(--color-secondary-desktop)
+        fill: var(--color-secondary-desktop)
+
+        @media only screen and (min-width: 0px) and (max-width: 767px)
+          stroke: var(--color-secondary-mobile)
+          fill: var(--color-secondary-mobile)
