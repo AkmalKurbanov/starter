@@ -1,0 +1,19 @@
+$border-radiuses: (
+  lg: rem(20),
+  md: rem(16),
+  sm: rem(12),
+  xs: rem(8),
+  xxs: rem(4)
+);
+
+
+@mixin border-radius($radius-map) {
+  @each $size, $radius in $radius-map {
+    .border-radius-#{$size} {
+      border-radius: $radius;
+    }
+  }
+}
+
+
+@include border-radius($border-radiuses);

@@ -1,16 +1,9 @@
 // USER VARIABLES SECTION
 
-$mc: #333 // Accent Color
 $fontsize: 16px // Body Font Size
-$tc: #333 // Text Color
-$lineheight: 1.65 // Document Line Height
-$userfont: roboto-oh5, sans-serif // User Font Family
+$lineheight: 130% // Document Line Height
+$userfont: manrope, sans-serif // User Font Family
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
-
-
-$wc: #fff
-$bc: #000
-$tr: all .3s
 
 
 // Bootstrap compatible gutter variable => $gutter
@@ -19,55 +12,61 @@ $tr: all .3s
 
 // IMPORT SECTION
 
-@import 'blocks/mixins/_flex'
 @import 'blocks/mixins/_rem'
+@import 'blocks/variables/_base'
+@import 'blocks/variables/_color-palette'
+@import 'blocks/variables/_shadow-effect'
+@import 'blocks/variables/_border-radius'
+@import 'blocks/variables/_text'
+
+@import 'blocks/mixins/_flex'
 @import 'blocks/mixins/_media'
-@import 'node_modules/normalize.css/normalize'
+// @import 'node_modules/normalize.css/normalize'
 // @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 // @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
 
 // FONTS LOAD SECTION
-						
-// @mixin font($fname, $fstyle, $fweight, $furl)
-// 	@font-face
-// 		font-family: $fname
-// 		font-style: $fstyle
-// 		font-weight: $fweight
-// 		src: url($furl) format('woff2')
 
-// @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('manrope', normal, 400, '../fonts/Manrope-Regular.woff2')
+@include font('manrope', normal, 500, '../fonts/Manrope-Medium.woff2')
+@include font('manrope', normal, 600, '../fonts/Manrope-SemiBold.woff2')
+@include font('manrope', normal, 700, '../fonts/Manrope-Bold.woff2')
+@include font('manrope', normal, 800, '../fonts/Manrope-ExtraBold.woff2')
+
 // @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 // @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 // @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 
 // GENERAL CSS SETTINGS
 
+// ::placeholder
+// 	color: #666
 
+// ::selection
+// 	background-color: $mc
+// 	color: #fff
 
-::placeholder
-	color: #666
-
-::selection
-	background-color: $mc
-	color: #fff
-
-input, textarea
-	outline: none
-	&:focus:required:invalid
-		border-color: red
-	&:required:valid
-		border-color: green
+// input, textarea
+// 	outline: none
+// 	&:focus:required:invalid
+// 		border-color: red
+// 	&:required:valid
+// 		border-color: green
 
 body
 	font-family: $userfont
 	font-size: $fontsize
 	line-height: $lineheight
-	color: $tc
+	color: var(--black)
 	min-width: rem(320)
 	position: relative
 	overflow-x: hidden
-
-
-

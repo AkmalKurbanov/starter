@@ -14,10 +14,82 @@ block main
   .wrapper
     .content
         include includes/header
-
         
+        div
+          .btn.btn_liner-primary Инвестировать
+          .btn.btn_liner-primary.active Инвестировать 
+          .btn.btn_liner-secondary Инвестировать
+          .btn.btn_liner-action-red Инвестировать
+          .btn.btn_liner-grey Инвестировать 
+          .btn.btn_liner-grey.disabled Инвестировать 
+          .btn.btn_liner-grey(disabled) Инвестировать 
+        br
+        div
+          .btn.btn_filled.btn_filled-primary Инвестировать
+          .btn.btn_filled.btn_filled-primary.active Инвестировать 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#arrowright-o') 
+          .btn.btn_filled.btn_filled-secondary Инвестировать
+          .btn.btn_filled.btn_filled-action-red Инвестировать
+          .btn.btn_filled.btn_filled-grey Инвестировать 
+          .btn.btn_filled.btn_filled-grey.disabled Инвестировать 
+          .btn.btn_filled.btn_filled-grey(disabled) Инвестировать 
+        
+        br
+        div
+          .btn.btn_unbordered.btn_sm.btn_liner-primary Инвестировать
+          .btn.btn_unbordered.btn_sm.btn_liner-primary.active Инвестировать
+            .icon
+              svg
+                use(xlink:href='sprite.svg#arrowright-o') 
+          .btn.btn_unbordered.btn_sm.btn_liner-secondary Инвестировать
+          .btn.btn_unbordered.btn_sm.btn_liner-action-red Инвестировать
+          .btn.btn_unbordered.btn_sm.btn_liner-grey Инвестировать 
+          .btn.btn_unbordered.btn_sm.btn_liner-grey.btn_text Инвестировать 
+          .btn.btn_unbordered.btn_sm.btn_liner-grey.disabled Инвестировать 
+          .btn.btn_unbordered.btn_sm.btn_liner-grey(disabled) Инвестировать
+
+        br
+        div
+          .btn.btn_unbordered.btn_text.btn_liner-primary Инвестировать
+          .btn.btn_unbordered.btn_text.btn_liner-primary.active Инвестировать 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#arrowright-o') 
+          .btn.btn_unbordered.btn_text.btn_liner-secondary Инвестировать
+          .btn.btn_unbordered.btn_text.btn_liner-action-red Инвестировать
+          .btn.btn_unbordered.btn_text.btn_liner-grey Инвестировать 
+          .btn.btn_unbordered.btn_text.btn_liner-grey Инвестировать 
+          .btn.btn_unbordered.btn_text.btn_liner-grey.disabled Инвестировать 
+          .btn.btn_unbordered.btn_text.btn_liner-grey(disabled) Инвестировать 
          
+        br
+        div
+          .btn-nav 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#angleleft')
+            | Назад    
+          .btn-nav.btn-nav_sm 
+            .icon
+              svg
+                use(xlink:href='sprite.svg#angleleft')
+            | Назад    
+                
      
+    <h1>Заголовок первого уровня</h1>
+    <h2>Заголовок второго уровня</h2>
+
+    <p class="text-400">Обычный текст с весом 400.</p>
+    <p class="text-600">Полужирный текст с весом 600.</p>
+    <p class="text-sm-400">Мелкий текст с весом 400.</p>
+    <p class="text-sm-600">Мелкий полужирный текст с весом 600.</p>
+
+    <span class="caption-400">Обычная подпись с весом 400.</span>
+    <span class="caption-600">Полужирная подпись с весом 600.</span>
+    <span class="caption-sm-400">Мелкая подпись с весом 400.</span>
+    <span class="caption-sm-700">Мелкая жирная подпись с весом 700.</span>
 
     include includes/footer
 

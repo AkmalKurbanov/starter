@@ -1,0 +1,187 @@
+@mixin liner($color, $hover-bg, $active-bg)
+  color: var(--#{$color})
+
+  &:hover
+    background-color: var(--#{$hover-bg})
+
+  &.active,
+  &:active
+    background-color: var(--#{$active-bg})
+
+
+@mixin filled($bg, $hover-bg, $active-bg)
+  background-color: var(--#{$bg})
+  color: #fff
+  border: none
+
+  &:hover
+    background-color: var(--#{$hover-bg})
+
+  &.active,
+  &:active
+    background-color: var(--#{$active-bg})
+
+  .icon
+    fill: var(--white)
+
+.btn
+  @include dif-xy-center
+  text-decoration: none
+  outline: none
+  border: none
+  border-width: rem(2)
+  border-style: solid
+  height: rem(48)
+  border-radius: var(--border-radius-sm)
+  padding: rem(12) rem(24)
+  font-size: rem(14)
+  font-weight: 600
+  transition: all 0.3s
+  cursor: pointer
+  box-sizing: border-box
+  
+
+  &.disabled,
+  &[disabled]
+    background: none
+    border-color: var(--grey-100)
+    color: var(--grey-300)
+    pointer-events: none
+
+    .icon
+      fill: var(--grey-300)
+
+  .icon
+    max-width: rem(24)
+    min-width: rem(24)
+    height: rem(24)
+    fill: currentColor
+    margin-left: rem(8)
+
+  &_liner-primary
+    @include liner(primary-300, primary-50, primary-100)
+
+  &_liner-secondary
+    @include liner(secondary-600, secondary-50, secondary-100)
+
+  &_liner-action-red
+    @include liner(action-red-400, action-red-50, action-red-100)
+
+  &_liner-grey
+    @include liner(grey-400, grey-50, grey-100)
+
+  &_filled-primary
+    @include filled(primary-300, primary-400, primary-500)
+
+  &_filled-secondary
+    @include filled(secondary-600, secondary-700, secondary-800)
+
+  &_filled-action-red
+    @include filled(action-red-400, action-red-500, action-red-800)
+
+  &_filled-grey
+    @include filled(grey-400, grey-500, grey-600)
+
+  &_unbordered
+    border: none
+
+  &_sm
+    height: rem(38)
+    padding: rem(10) rem(16)
+
+  &_text
+    height: rem(28)
+    padding: rem(4)
+    border-radius: rem(8)
+    
+    .icon
+      max-width: rem(20)
+      min-width: rem(20)
+      height: rem(20)
+
+  
+.btn-nav 
+  background-color: var(--grey-100)
+  border-radius: var(--border-radius-sm)    
+  @include dif-xy-center
+  padding: rem(8.62)
+  color: var(--black)
+  font-weight: 600
+  box-sizing: border-box
+  height: rem(36)
+  cursor: pointer
+  transition: $transition 
+
+  &:hover
+    background-color: var(--primary-50)
+
+  &.active,
+  &:active
+    background-color: var(--primary-100)
+
+
+  .icon
+    max-width: rem(20)
+    min-width: rem(20)
+    height: rem(20)
+    margin-right: rem(5)
+    fill: currentColor
+
+  &_sm
+    height: rem(32)
+    font-size: rem(12)
+
+    .icon
+      max-width: rem(16)
+      min-width: rem(16)
+      height: rem(16)
+
+.notification       
+  border-radius: var(--border-radius-xs) 
+  background-color: var(--primary-50)
+  color: var(--primary-300)
+  @include dif-xy-center
+  min-width: rem(32)
+  height: rem(32)
+  padding: rem(7) rem(3)
+  box-sizing: border-box
+  cursor: pointer
+  transition: $transition
+  position: relative
+
+  .icon
+    fill: currentColor
+    transition: $transition
+    position: absolute
+    left: rem(8)     
+    background-color: var(--primary-50)
+    z-index: 1
+
+  &__count  
+    opacity: 0
+    transform: translateX(-10px)
+    transition: $transition 
+    position: absolute
+    left: rem(20)
+    font-size: var(--text-sm-600)
+    
+  &:hover
+    background-color: var(--primary-100)
+    min-width: rem(42)
+    justify-content: space-between
+    
+    .icon
+      left: rem(4)
+      background-color: var(--primary-100)
+
+    .notification__count
+      opacity: 1  
+      transform: none
+      left: auto
+      right: rem(4)
+  
+  &.active,
+  &:active  
+    background-color: var(--primary-200)
+    .icon
+      background-color: var(--primary-200)

@@ -1,0 +1,110 @@
+extends layouts/main
+
+block vars
+  - var description = '';
+  - var keywords= '';
+  - var ogtitle = '';
+  - var ogtype = '';
+  - var ogurl = '';
+  - var ogimg = '';
+
+block title
+  | Components
+block main
+  .wrapper
+    .content
+      include includes/header
+      
+      div
+        .btn.btn_liner-primary Инвестировать
+        .btn.btn_liner-primary.active Инвестировать 
+        .btn.btn_liner-secondary Инвестировать
+        .btn.btn_liner-action-red Инвестировать
+        .btn.btn_liner-grey Инвестировать 
+        .btn.btn_liner-grey.disabled Инвестировать 
+        .btn.btn_liner-grey(disabled) Инвестировать 
+      br
+      div
+        .btn.btn_filled.btn_filled-primary Инвестировать
+        .btn.btn_filled.btn_filled-primary.active Инвестировать 
+          .icon
+            svg
+              use(xlink:href='sprite.svg#arrowright-o') 
+        .btn.btn_filled.btn_filled-secondary Инвестировать
+        .btn.btn_filled.btn_filled-action-red Инвестировать
+        .btn.btn_filled.btn_filled-grey Инвестировать 
+        .btn.btn_filled.btn_filled-grey.disabled Инвестировать 
+        .btn.btn_filled.btn_filled-grey(disabled) Инвестировать 
+      
+      br
+      div
+        .btn.btn_unbordered.btn_sm.btn_liner-primary Инвестировать
+        .btn.btn_unbordered.btn_sm.btn_liner-primary.active Инвестировать
+          .icon
+            svg
+              use(xlink:href='sprite.svg#arrowright-o') 
+        .btn.btn_unbordered.btn_sm.btn_liner-secondary Инвестировать
+        .btn.btn_unbordered.btn_sm.btn_liner-action-red Инвестировать
+        .btn.btn_unbordered.btn_sm.btn_liner-grey Инвестировать 
+        .btn.btn_unbordered.btn_sm.btn_liner-grey.btn_text Инвестировать 
+        .btn.btn_unbordered.btn_sm.btn_liner-grey.disabled Инвестировать 
+        .btn.btn_unbordered.btn_sm.btn_liner-grey(disabled) Инвестировать
+
+      br
+      div
+        .btn.btn_unbordered.btn_text.btn_liner-primary Инвестировать
+        .btn.btn_unbordered.btn_text.btn_liner-primary.active Инвестировать 
+          .icon
+            svg
+              use(xlink:href='sprite.svg#arrowright-o') 
+        .btn.btn_unbordered.btn_text.btn_liner-secondary Инвестировать
+        .btn.btn_unbordered.btn_text.btn_liner-action-red Инвестировать
+        .btn.btn_unbordered.btn_text.btn_liner-grey Инвестировать 
+        .btn.btn_unbordered.btn_text.btn_liner-grey Инвестировать 
+        .btn.btn_unbordered.btn_text.btn_liner-grey.disabled Инвестировать 
+        .btn.btn_unbordered.btn_text.btn_liner-grey(disabled) Инвестировать 
+        
+      br
+      div
+        .btn-nav 
+          .icon
+            svg
+              use(xlink:href='sprite.svg#angleleft')
+          | Назад    
+        .btn-nav.btn-nav_sm 
+          .icon
+            svg
+              use(xlink:href='sprite.svg#angleleft')
+          | Назад    
+              
+    
+      h1 Заголовок первого уровня
+      h2 Заголовок второго уровня
+      h3 Заголовок третьего уровня
+      h4 Заголовок четвертого уровня
+      h5 Заголовок пятого уровня
+      p.text-400 Обычный текст Regular.
+      p.text-600 Полужирный текст SemiBold.
+      p.text-sm-400 Мелкий текст Regular.
+      p.text-sm-600 Мелкий полужирный текст SemiBold.
+      span.caption-400 Обычная подпись Regular.
+      span.caption-600 Полужирная подпись SemiBold.
+      span.caption-sm-400 Мелкая подпись Regular.
+      span.caption-sm-700 Мелкая жирная подпись Bold.
+
+      br
+
+      .notification 
+        .icon.icon_w16
+          svg
+            use(xlink:href='sprite.svg#chat')
+        
+        .notification__count 17
+
+
+
+
+  include includes/footer
+
+
+  include includes/scripts 

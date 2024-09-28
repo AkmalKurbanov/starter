@@ -1,0 +1,42 @@
+$headings: (
+  h1: (fz: rem(64), lh: 130%),
+  h2: (fz: rem(48), lh: 130%),
+  h3: (fz: rem(36), lh: 130%),
+  h4: (fz: rem(24), lh: 130%),
+  h5: (fz: rem(20), lh: 130%)
+);
+
+$text-styles: (
+  text-400: (fz: rem(16), lh: 130%, fw: 400), 
+  text-600: (fz: rem(16), lh: 130%, fw: 600), 
+  text-sm-400: (fz: rem(14), lh: 130%, fw: 400),
+  text-sm-600: (fz: rem(14), lh: 130%, fw: 600),
+  caption-400: (fz: rem(12), lh: 130%, fw: 400),
+  caption-600: (fz: rem(12), lh: 130%, fw: 600),
+  caption-sm-400: (fz: rem(10), lh: 130%, fw: 400),
+  caption-sm-700: (fz: rem(10), lh: 130%, fw: 700)
+);
+
+
+@mixin headings($heading-map) {
+  @each $key, $styles in $heading-map {
+    #{$key} {
+      font-size: map-get($styles, fz);
+      line-height: map-get($styles, lh);
+    }
+  }
+}
+
+@mixin text($text-map) {
+  @each $key, $styles in $text-map {
+    .#{$key} {
+      font-size: map-get($styles, fz);
+      line-height: map-get($styles, lh);
+      font-weight: map-get($styles, fw);
+    }
+  }
+}
+
+
+@include headings($headings);
+@include text($text-styles);
